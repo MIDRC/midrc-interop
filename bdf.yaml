@@ -1,0 +1,164 @@
+version: 0.0.1
+
+tool:
+  name: MIDRC Interoperability Tool
+  repo_url: https://github.com/MIDRC/midrc-interop
+  tool_homepage: https://imaging-hub.data-commons.org/
+  documentation_url: https://gen3.org/products/data-meshes/
+  tool_type: 
+  - Suite
+  - WebApp
+  - WebAPI
+  - CLI
+  tool_notes: MIDRC Interoperability Tool is a suite of Gen3 mesh software services that enable medical imaging data repositories to participate in a data mesh by sharing data, communicating, and exchanging information with other data resource, commons, and hubs.
+
+llm:
+  usesLlm: false
+  bringOwnKey: false
+
+input:
+  - name: Image file objects 1
+    dataCategory: imaging
+    dataClass: image
+    dataType: radiology
+    format:
+      - dicom
+      - images
+    dataStandard:
+      - DICOM
+    proprietary: false
+    source: https://data.midrc.org/dd
+  - name: Imaging structured 1
+    dataCategory: imaging
+    dataClass: structured
+    dataType: radiology
+    format:
+      - json
+      - tsv
+    dataStandard:
+      - DICOM
+      - LOINC
+    proprietary: false
+    source: https://data.midrc.org/dd
+  - name: Clinical structured 1
+    dataCategory: clinical-phenotype
+    dataClass: structured
+    dataType: clinical-ehr
+    format:
+      - json
+    dataStandard:
+      - OMOP
+      - NCIT
+      - SNOMED
+    proprietary: false
+    source: https://data.midrc.org/dd
+
+output:
+  - name: Image file objects 1
+    dataCategory: imaging
+    dataClass: image
+    dataType: radiology
+    format:
+      - dicom
+      - images
+    dataStandard:
+      - DICOM
+    proprietary: false
+    source: https://data.midrc.org/dd
+  - name: Imaging structured 1
+    dataCategory: imaging
+    dataClass: structured
+    dataType: radiology
+    format:
+      - json
+      - tsv
+    dataStandard:
+      - dicom
+    proprietary: false
+    source: https://data.midrc.org/
+  - name: Clinical structured 1
+    dataCategory: clinical-phenotype
+    dataClass: structured
+    dataType: clinical-ehr
+    format:
+      - json
+    dataStandard:
+      - OMOP
+      - NCIT
+      - SNOMED
+    proprietary: false
+    source: https://data.midrc.org/dd
+
+license:
+  license_type: Apache-2.0
+  link: https://github.com/MIDRC/midrc-interop/blob/main/LICENSE
+
+funding:
+  source: Developed for MIDRC creation with NIBIB, and then generalized and converted to tool via ARPA-H BDF
+  agreement: Not specified
+  link: ""
+
+domains:
+  - Imaging
+
+credit:
+  - name: MIDRC
+    role: Developer
+    org: Medical Imaging and Data Resource Center
+    url: https://www.midrc.org/
+
+target_users:
+  primary_user:
+    user_type: data-curator
+    technical_literacy_level:
+      - intermediate
+      - advanced
+      - expert
+    biomedical_literacy_level:
+      - intermediate
+      - advanced
+      - expert
+  secondary_user:
+    user_type: researcher
+    technical_literacy_level:
+      - intermediate
+      - advanced
+      - expert
+    biomedical_literacy_level:
+      - intermediate
+      - advanced
+      - expert
+
+maturity:
+  beginning_maturity: 1
+  current_maturity: 6
+
+media: 
+  [
+    { "link": "https://gen3.org/community/events/Gen3%20Forum%20July%202025%20-%20Deployment%20Options.pdf" },
+    { "link": "https://www.youtube.com/watch?v=o_TmbU9thuY" },
+    { "link": "https://www.youtube.com/watch?v=K5ld3V5AslE" },
+    { "link": "https://www.youtube.com/watch?v=0WCKOJtj3RM" }
+  ]
+
+collaborations: []
+
+api:
+  api_info:
+    api_request:
+      endpoint: /guppy/graphql
+      request_type: POST
+      parameters: 
+      - query
+      - variables
+      endpoint: /v0/submission
+      request_type: POST
+      parameters: 
+      - program
+      - project
+      - body
+
+query_language:
+  query_implementation: True
+  query_type: graphQL
+
