@@ -5,11 +5,7 @@ tool:
   repo_url: https://github.com/MIDRC/midrc-interop
   tool_homepage: https://imaging-hub.data-commons.org/
   documentation_url: https://gen3.org/products/data-meshes/
-  tool_type: 
-  - Suite
-  - WebApp
-  - WebAPI
-  - CLI
+  tool_type: WebAPI
   tool_notes: MIDRC Interoperability Tool is a suite of Gen3 mesh software services that enable medical imaging data repositories to participate in a data mesh by sharing data, communicating, and exchanging information with other data resource, commons, and hubs.
 
 llm:
@@ -133,7 +129,7 @@ maturity:
   beginning_maturity: 1
   current_maturity: 6
 
-media: 
+media:
   [
     { "link": "https://gen3.org/community/events/Gen3%20Forum%20July%202025%20-%20Deployment%20Options.pdf" },
     { "link": "https://www.youtube.com/watch?v=o_TmbU9thuY" },
@@ -144,21 +140,8 @@ media:
 collaborations: []
 
 api:
-  api_info:
-    api_request:
-      endpoint: /guppy/graphql
-      request_type: POST
-      parameters: 
-      - query
-      - variables
-      endpoint: /v0/submission
-      request_type: POST
-      parameters: 
-      - program
-      - project
-      - body
+  api_request: [{"request_type":"POST", "endpoint":"/v0/submission", "parameters":[{"name":"program", "example":"Stanford", "required":true}, {"name":"project", "example":"AIMI", "required":true}, {"name":"body", "example":"body", "required":true}]}]
 
 query_language:
   query_implementation: True
-  query_type: graphQL
-
+  query_type: GraphQL
