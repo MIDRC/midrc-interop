@@ -1,0 +1,21 @@
+name: CI
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: 22.11.0
+      - name: Get Version
+        run: npm -v
+      - name: Install modules
+
+        run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+  validate-tool:
+    uses: ARPA-H-BDF/bdfkb-schema/.github/workflows/ci-validate.yaml@main
+    with:
+      python-version: '3.9'
