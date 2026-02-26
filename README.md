@@ -2,7 +2,7 @@
 The MIDRC Interoperability Tool is a suite of Gen3 mesh software services and API adaptors written in Python that enable medical imaging data repositories to participate in a data mesh by sharing data, communicating, and exchanging information with other data resource, commons, and hubs. 
 
 ## Prerequisites
-This project is built with Python. Ensure you have Python 3.6 or later installed.
+This project is built with Python. Ensure you have Python 3.9 or later installed.
 
 ## Gen3 SDK for Python
 

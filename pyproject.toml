@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "gen3"
-homepage = "https://gen3.org/"
-version = "4.27.5"
-description = "Gen3 CLI and Python SDK"
+name = "midrc-interop"
+homepage = "https://midrc.org/"
+version = "1.0.0"
+description = "API adaptors and services for MIDRC BDF Imaging Hub interoperating with nodes in the biomedical imaging data mesh."
 authors = ["Center for Translational Data Science at the University of Chicago <support@gen3.org>"]
 license = "Apache-2.0"
 packages = [
