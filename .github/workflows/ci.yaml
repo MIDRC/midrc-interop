@@ -1,19 +1,29 @@
 name: CI
-on: push
+
+on:
+  # run on pushed commits to master and on new commits on pull requests
+  push:
+  pull_request:
+    types: [opened, synchronize]
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v4.1.0
-        with:
-          node-version: 22.11.0
-      - name: Get Version
-        run: npm -v
-      - name: Install modules
-        run: npm ci
-      - name: Run ESLint
-        run: npm run lint
+  Security:
+    name: Security Pipeline
+    uses: uc-cdis/.github/.github/workflows/securitypipeline.yaml@master
+    with:
+       python-poetry: 'false'
+    secrets: inherit  # pragma: allowlist secret
+  UnitTest:
+    name: Python Unit Test
+    uses: uc-cdis/.github/.github/workflows/python_unit_test.yaml@master
+    strategy:
+      matrix:
+        # the versions for which we require the CI to pass on PRs can
+        # be updated in the repo settings (branch rules)
+        version: ['3.9', '3.10', '3.11', '3.12', '3.13']
+      fail-fast: false  # run for all versions even if one of them fails
+    with:
+        python-version: ${{ matrix.version }}
   validate-tool:
     uses: ARPA-H-BDF/bdfkb-schema/.github/workflows/ci-validate.yaml@main
     with:
