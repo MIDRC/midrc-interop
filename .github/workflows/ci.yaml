@@ -1,20 +1,18 @@
 name: CI
-on: push
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v4.1.0
-        with:
-          node-version: 22.11.0
-      - name: Get Version
-        run: npm -v
-      - name: Install modules
 
-        run: npm ci
-      - name: Run ESLint
-        run: npm run lint
+on:
+  # run on pushed commits to master and on new commits on pull requests
+  push:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  Security:
+    name: Security Pipeline
+    uses: uc-cdis/.github/.github/workflows/securitypipeline.yaml@master
+    with:
+       python-poetry: 'false'
+    secrets: inherit  # pragma: allowlist secret
   validate-tool:
     uses: ARPA-H-BDF/bdfkb-schema/.github/workflows/ci-validate.yaml@main
     with:
