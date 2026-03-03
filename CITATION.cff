@@ -3,9 +3,9 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Christopher"
   given-names: "Meyer"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
+  orcid: "XXX"
 title: "midrc-interop"
-version: 1.0.0
-doi: 10.5281/zenodo.1234
-date-released: 2026-03-03
+version: XXX
+doi: XXX
+date-released: XXX
 url: "https://github.com/MIDRC/midrc-interop"
