@@ -1,0 +1,22 @@
+{
+  "days_to_birth": null, 
+  "gender": null, 
+  "cause_of_death": null, 
+  "days_to_death": null, 
+  "vital_status": null, 
+  "days_to_birth_gt89": null, 
+  "zip": null, 
+  "project_id": null, 
+  "country_of_residence": null, 
+  "index_event": null, 
+  "site_id": null, 
+  "age_at_index": null, 
+  "*datasets": {
+    "submitter_id": null
+  }, 
+  "race": null, 
+  "age_at_index_gt89": null, 
+  "*submitter_id": null, 
+  "ethnicity": null, 
+  "*type": "subject"
+}
