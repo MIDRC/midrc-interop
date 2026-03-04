@@ -1,5 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If acknowledging MIDRC-funded research, please cite as the following:
+
+'Research reported in this [publication/press release] is part of MIDRC (The Medical Imaging and Data Resource Center) 
+and was made possible by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) of the National Institutes of Health under contract 75N92020D00021.
+*For ARPA-H funded BDF research projects include the following contract number: 75N92020D00021/75N92023F00002
+The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the oﬃcial policies, 
+either expressed or implied, of the U.S. Government.'
+
+If acknowledging data downloaded from MIDRC, please cite as the following:
+'The imaging and associated clinical data downloaded from MIDRC (The Medical Imaging and Data Resource Center) 
+and used for research in this [publication/press release] was made possible by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) 
+of the National Institutes of Health under contract 75N92020D00021 and through The Advanced Research Projects Agency for Health (ARPA-H).
+The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the oﬃcial policies, 
+either expressed or implied, of the U.S. Government.'"
 authors:
 - family-names: "Christopher"
   given-names: "Meyer"
