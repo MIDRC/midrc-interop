@@ -14,6 +14,10 @@ The tools utilized for MIDRC interact with the Gen3 API. For more information, s
 ## Harmonization
 MIDRC BIH leverages a data model in order to harmonize the discovery metadata aggregated across the data mesh. If you would like to view some sample submission templates, you can find them in [this directory](https://github.com/MIDRC/midrc-interop/tree/30752d700830c1f12998ac1fc1049ed0af9e5667/submission_templates). Including for example, dataset.json, subject.json, etc.
 
+## Requirements
+
+- Python >=3.9,<4.0
+
 ## Architecture
 
 ### Gen3 Data Commons Architecture
