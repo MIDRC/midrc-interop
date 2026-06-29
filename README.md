@@ -20,6 +20,11 @@ MIDRC BIH leverages a data model in order to harmonize the discovery metadata ag
 
 ## Architecture
 
+General Gen3 architecture can be found in the Gen3 Developer Guide at:
+
+https://docs.gen3.org/gen3-resources/developer-guide/architecture/
+
+
 ### Gen3 Data Commons Architecture
 
 ![Gen3 Data Commons Architecture](docs/images/gen3_data_commons_arch.png) 
@@ -39,3 +44,9 @@ graph LR
 
 ## Contributing
 Check out our [CONTRIBUTING.md](CONTRIBUTING.md) doc to learn how to contribute.
+
+## OpenSSF Best Practices
+
+This project is working towards meeting the Open Source Security Foundation (OpenSSF) best practices.
+
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13438/badge)](https://www.bestpractices.dev/projects/13438)
