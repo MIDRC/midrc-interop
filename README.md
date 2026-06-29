@@ -14,5 +14,24 @@ The tools utilized for MIDRC interact with the Gen3 API. For more information, s
 ## Harmonization
 MIDRC BIH leverages a data model in order to harmonize the discovery metadata aggregated across the data mesh. If you would like to view some sample submission templates, you can find them in [this directory](https://github.com/MIDRC/midrc-interop/tree/30752d700830c1f12998ac1fc1049ed0af9e5667/submission_templates). Including for example, dataset.json, subject.json, etc.
 
+## Architecture
+
+### Gen3 Data Commons Architecture
+
+![Gen3 Data Commons Architecture](docs/images/gen3_data_commons_arch.png) 
+
+### Gen3 Data Hub Architecture
+
+![MIDRC Imaging Hub Architecture](docs/images/gen3_interop_arch.png)
+
+### General Architecture
+
+```mermaid
+graph LR
+  User[Web Client / Application] -->|HTTP/REST| API[Interop API (FastAPI)]
+  API -->|CRUD| DB[Database]
+  API -->|DICOMweb, APIs| Ext[External Imaging Systems]
+```
+
 ## Contributing
 Check out our [CONTRIBUTING.md](CONTRIBUTING.md) doc to learn how to contribute.
