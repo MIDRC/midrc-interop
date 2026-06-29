@@ -37,7 +37,7 @@ https://docs.gen3.org/gen3-resources/developer-guide/architecture/
 
 ```mermaid
 graph LR
-  User[Web Client / Application] -->|HTTP/REST| API[Interop API (FastAPI)]
+  User[Web Client or Application] -->|HTTP/REST| API[Interop API - FastAPI]
   API -->|CRUD| DB[Database]
   API -->|DICOMweb, APIs| Ext[External Imaging Systems]
 ```
