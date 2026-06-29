@@ -1,0 +1,27 @@
+name: ClusterFuzzLite
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  fuzz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install atheris pydicom  # add other dependencies as needed
+      - name: Run ClusterFuzzLite
+        env:
+          FUZZ_TARGET: fuzz/fuzz_parse_dicom.py
+        run: |
+          python $FUZZ_TARGET
