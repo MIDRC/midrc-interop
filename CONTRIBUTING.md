@@ -2,6 +2,11 @@
 
 Thank you for contributing to the MIDRC Interoperability Tools.
 
+## General Gen3 Contribution Guide
+
+General information on contributing to Gen3 projects can be found in the Gen3 Developer Guide at:
+https://docs.gen3.org/gen3-resources/developer-guide/contribute/
+
 ## Code of Conduct
 This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
 
